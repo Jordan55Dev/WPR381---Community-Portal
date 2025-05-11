@@ -1,4 +1,4 @@
 /node_modules/
-public/css/style.css
-public/js/*.js
+public/css/overrides.css
+public/js/carousel.js
 .env
