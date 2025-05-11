@@ -16,3 +16,41 @@
 .card:hover .event-hover-overlay {
   opacity: 1;
 }
+
+/* ===== Rotating Circle & Color-Changing Text ===== */
+
+.circle-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.circle-wrap .circle-text {
+  position: relative;
+  z-index: 2;
+  font-size: 3rem;                   /* adjust as needed */
+  font-family: var(--font-heading);
+  animation: colorCycle 6s ease-in-out infinite alternate;
+}
+
+.circle-wrap .rotating-circle {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 220px; height: 220px;       /* adjust diameter */
+  margin: -110px 0 0 -110px;         /* = -½ diameter */
+  border: 4px solid var(--color-primary);
+  border-radius: 50%;
+  z-index: 1;
+  animation: rotateCircle 8s linear infinite;
+}
+
+/* Circle rotation */
+@keyframes rotateCircle {
+  to { transform: rotate(360deg); }
+}
+
+/* Text color cycle through your brand palette */
+@keyframes colorCycle {
+  0%   { color: var(--color-primary); }
+  50%  { color: var(--color-accent); }
+  100% { color: var(--color-secondary); }
+}
