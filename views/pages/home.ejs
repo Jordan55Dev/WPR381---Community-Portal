@@ -1,19 +1,38 @@
 <%- include('../partials/header') %>
-<%- include('../partials/heroCarousel') %>
-<main class="container my-5">
+
+<div class="container mt-5">
+  <div class="text-center">
+    <h1 class="display-4">Welcome to Our Community Portal</h1>
+    <p class="lead">Stay connected, informed, and involved with your community.</p>
+  </div>
+
+  <hr class="my-5">
+
   <h2 class="mb-4">Upcoming Events</h2>
   <div class="row">
-    <% upcomingEvents.forEach(evt => { %>
-      <div class="col-md-6 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title"><%= evt.title %></h5>
-            <p class="card-text"><%= evt.date %> — <%= evt.location %></p>
-            <a href="/events#<%= evt.id %>" class="btn btn-primary">View Details</a>
-          </div>
+    <% if (upcomingEvents && upcomingEvents.length > 0) { %>
+      <% upcomingEvents.forEach(event => { %>
+        <div class="col-md-6 mb-4">
+            <div 
+                class="card text-white border-0 h-100"
+                style="
+                background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)),
+                            url('<%= event.image %>') center/cover no-repeat;
+                min-height: 250px;
+                border-radius: 0.5rem;
+                ">
+                <div class="card-img-overlay d-flex flex-column justify-content-end p-4">
+                <h5 class="card-title"><%= event.title %></h5>
+                <p class="card-text mb-1"><strong>Date:</strong> <%= event.date %></p>
+                <p class="card-text"><strong>Location:</strong> <%= event.location %></p>
+                </div>
+            </div>
         </div>
-      </div>
-    <% }) %>
+      <% }) %>
+    <% } else { %>
+      <p>No upcoming events at the moment. Stay tuned!</p>
+    <% } %>
   </div>
-</main>
+</div>
+
 <%- include('../partials/footer') %>

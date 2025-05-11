@@ -61,4 +61,17 @@ const events = [
   }
 ];
 
-module.exports = events;
+
+function getUpcomingEvents(count = 2) {
+  const today = new Date();
+
+  return events
+    .filter(event => new Date(event.date) >= today)
+    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .slice(0, count);
+}
+
+module.exports = {
+  events,
+  getUpcomingEvents
+};
