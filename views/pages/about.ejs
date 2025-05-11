@@ -1,3 +1,46 @@
 <%- include('../partials/header') %>
-<h1>About Us</h1>
+
+<main class="container py-5">
+  <!-- Hero -->
+  <section class="text-center mb-5">
+    <h1 class="display-4">About TogetherWorks</h1>
+    <p class="lead text-secondary">
+      TogetherWorks brings our community closer—meet the people making it happen.
+    </p>
+  </section>
+
+  <!-- What We Do (optional) -->
+  <section class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <img src="/images/whatwedo.jpg" class="img-fluid rounded" alt="What We Do">
+    </div>
+    <div class="col-md-6">
+      <h2>Our Mission</h2>
+      <p>We connect, empower, and uplift through events, workshops, and shared resources.</p>
+    </div>
+  </section>
+
+  <!-- Team Grid -->
+  <section>
+    <h2 class="mb-4 text-center">Meet the Team</h2>
+    <div class="row g-4 justify-content-center">
+      <% team.forEach(member => { %>
+        <div class="col-6 col-sm-4 col-md-3 text-center">
+          <div class="mb-3">
+            <img 
+              src="/images/<%= member.photo %>" 
+              alt="<%= member.name %>"
+              class="rounded-circle mx-auto d-block"
+              style="width:120px; height:120px; object-fit:cover;"
+            >
+          </div>
+          <h5><%= member.name %></h5>
+          <p class="text-muted"><%= member.role %></p>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+</main>
+
+
 <%- include('../partials/footer') %>
