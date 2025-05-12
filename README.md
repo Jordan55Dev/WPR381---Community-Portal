@@ -19,7 +19,7 @@ Our team collaborated to bring this community portal to life. Here are the assig
 * **Team Lead:** Eduard Jacobus Engelbrecht
 * **Backend Developer:** Jordan Ross Olive
 * **Frontend Developer:** Sfundo Khumalo
-* **Data Manager:** Eduard Jacobus Engelbrecht]
+* **Data Manager:** Eduard Jacobus Engelbrecht
 * **Documentation Manager:** Magane Letsoalo
 
 ## Setup Instructions
