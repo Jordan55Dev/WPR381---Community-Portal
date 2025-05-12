@@ -8,7 +8,7 @@ The following technologies were utilized in the development of this project:
 * Node.js (v18+)
 * Express.js (v4+)
 * EJS (v3+)
-* CSS (or specify if Bootstrap 5 was used by your team, e.g., 'CSS / Bootstrap 5')
+* CSS / Bootstrap 5
 * Git & GitHub
 * nodemon (for live development)
 
