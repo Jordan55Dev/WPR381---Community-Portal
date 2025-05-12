@@ -68,8 +68,23 @@ const events = [
     location: "Community Wellness Center",
     image: "images/supporttalk.jpg",
     description: "An informative session on caregiving, wellness resources, and elder support networks."
+  },
+  {
+    title: "Neighborhood Game Day",
+    date: "2025-06-08",
+    location: "Sunnyvale Sports Grounds",
+    image: "images/gameday.jpg",
+    description: "A fun-filled day of sports and games for all ages—bring your energy and team spirit!"
+  },
+  {
+    title: "Sustainable Living Workshop",
+    date: "2025-06-10",
+    location: "Eco Hall",
+    image: "images/sustainable.jpg",
+    description: "Learn how to reduce your carbon footprint and live more sustainably at home."
   }
 ];
+
 
 
 
