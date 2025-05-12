@@ -1,5 +1,7 @@
 <%- include('../partials/header') %>
 
+<% const old = typeof oldInput !== 'undefined' ? oldInput : {}; %>
+
 <div class="container my-5">
   <div class="row justify-content-center">
     <div class="col-md-8">
@@ -18,25 +20,25 @@
       <form action="/contact" method="POST" class="needs-validation" novalidate>
         <div class="mb-3">
           <label for="name" class="form-label">Full Name</label>
-          <input type="text" class="form-control" id="name" name="name" required placeholder="Your full name">
+          <input type="text" class="form-control" id="name" name="name" required placeholder="Your full name" value="<%= old.name || '' %>">
           <div class="invalid-feedback">Please enter your name.</div>
         </div>
 
         <div class="mb-3">
           <label for="email" class="form-label">Email Address</label>
-          <input type="email" class="form-control" id="email" name="email" required placeholder="you@example.com">
+          <input type="email" class="form-control" id="email" name="email" required placeholder="you@example.com" value="<%= old.email || '' %>">
           <div class="invalid-feedback">Please enter a valid email.</div>
         </div>
 
         <div class="mb-3">
           <label for="subject" class="form-label">Subject</label>
-          <input type="text" class="form-control" id="subject" name="subject" required placeholder="What’s your message about?">
+          <input type="text" class="form-control" id="subject" name="subject" required placeholder="What’s your message about?" value="<%= old.subject || '' %>">
           <div class="invalid-feedback">Please enter a subject.</div>
         </div>
 
         <div class="mb-3">
           <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+          <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Type your message here..."><%= old.message || '' %></textarea>
           <div class="invalid-feedback">Please enter a message.</div>
         </div>
 
