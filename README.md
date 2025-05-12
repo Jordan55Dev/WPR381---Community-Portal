@@ -66,7 +66,7 @@ Below are screenshots demonstrating the key pages and functionalities of the Com
   
 
 * **Thank You Page:**
-    ![Thank You Page](public/images/screenshot_thankyou.jpg)
+    ![Thank You Page](public/images/ThankYou.png)
 
    
 ## Reflection (Optional)
