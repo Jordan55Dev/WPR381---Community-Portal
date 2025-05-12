@@ -69,6 +69,6 @@ Below are screenshots demonstrating the key pages and functionalities of the Com
     ![Thank You Page](public/images/ThankYou.png)
 
    
-## Reflection (Optional)
+## Reflection 
 
 coming soon
