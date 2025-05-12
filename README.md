@@ -68,7 +68,7 @@ Below are screenshots demonstrating the key pages and functionalities of the Com
 * **Thank You Page:**
     ![Thank You Page](public/images/ThankYou.png)
 
-   
-## Reflection 
+## 👋 Final Words
 
-coming soon
+Thanks for checking out our project! This portal was a great opportunity for our team to learn and collaborate using real-world development tools. We hope you enjoy exploring it as much as we enjoyed building it. 
+- TogetherWorks Team
