@@ -1,5 +1,5 @@
 
-/* Position context is already set on .event-card via inline style */
+
 
 .event-hover-overlay {
   position: absolute;
@@ -12,12 +12,12 @@
   overflow-y: auto;
 }
 
-/* Fade in on hover */
+
 .card:hover .event-hover-overlay {
   opacity: 1;
 }
 
-/* ===== Rotating Circle & Color-Changing Text ===== */
+
 
 .circle-wrap {
   position: relative;
