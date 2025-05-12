@@ -50,19 +50,19 @@ To set up and run this project locally, follow these steps:
 Below are screenshots demonstrating the key pages and functionalities of the Community Portal:
 
 * **Home Page:**
-    ![Home Page](public/images/screenshot_home.jpg)
+    ![Home Page](public/images/Home.png)
 
 
 * **About Page:**
-    ![About Page](public/images/screenshot_about.jpg)
+    ![About Page](public/images/About.png)
 
 
 * **Events Page:**
-    ![Events Page](public/images/screenshot_events.jpg)
+    ![Events Page](public/images/Events.png)
     
 
 * **Contact Page:**
-    ![Contact Page](public/images/screenshot_contact.png)
+    ![Contact Page](public/images/ContactUs.png)
   
 
 * **Thank You Page:**
