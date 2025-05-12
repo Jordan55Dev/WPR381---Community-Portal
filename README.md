@@ -45,7 +45,7 @@ To set up and run this project locally, follow these steps:
 5.  **Access the application:**
     Open your web browser and navigate to `http://localhost:3000` (or the port configured in your `app.js` if different).
 
-## Screenshots (Optional, but Highly Recommended)
+## Screenshots 
 
 Below are screenshots demonstrating the key pages and functionalities of the Community Portal:
 
