@@ -1,9 +1,67 @@
 <%- include('../partials/header') %>
-<h1>Contact Us</h1>
-<form method="POST" action="/contact">
-  <input type="text" name="name" placeholder="Your Name" required /><br />
-  <input type="email" name="email" placeholder="Your Email" required /><br />
-  <textarea name="message" placeholder="Your Message" required></textarea><br />
-  <button type="submit">Send</button>
-</form>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="mb-4 text-center">Contact Us</h2>
+
+      <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+        <div class="alert alert-danger">
+          <ul class="mb-0">
+            <% errors.forEach(err => { %>
+              <li><%= err %></li>
+            <% }) %>
+          </ul>
+        </div>
+      <% } %>
+
+      <form action="/contact" method="POST" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" name="name" required placeholder="Your full name">
+          <div class="invalid-feedback">Please enter your name.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" required placeholder="you@example.com">
+          <div class="invalid-feedback">Please enter a valid email.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" class="form-control" id="subject" name="subject" required placeholder="What’s your message about?">
+          <div class="invalid-feedback">Please enter a subject.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+          <div class="invalid-feedback">Please enter a message.</div>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-outline-dark">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+(() => {
+  'use strict';
+  const forms = document.querySelectorAll('.needs-validation');
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
+</script>
+
 <%- include('../partials/footer') %>

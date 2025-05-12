@@ -1,4 +1,69 @@
 <%- include('../partials/header') %>
-<h1>Upcoming Events</h1>
-<p>Check out what's happening soon!</p>
+
+<div class="container my-5">
+  <div class="text-center mb-4">
+    <h1 class="display-5">All Community Events</h1>
+    <p class="text-muted">Explore upcoming activities in your community.</p>
+  </div>
+  
+  <div class="mb-4 text-center">
+  <select id="monthFilter" class="form-select w-auto d-inline-block">
+    <option value="all">All Events</option>
+    <% 
+      const months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ]; 
+      months.forEach((month, index) => { 
+    %>
+      <option value="<%= index %>"><%= month %></option>
+    <% }) %>
+  </select>
+  </div>
+
+  <div class="row g-4">
+    <% events.forEach(event => { 
+      const month = new Date(event.date).getMonth();
+    %>
+      <div class="col-sm-12 col-md-6 col-lg-4 event-card" data-month="<%= month %>">
+        <div class="card h-100 border-0 shadow">
+          <div 
+            class="card-img-top bg-dark text-white d-flex align-items-end p-3"
+            style="
+              height: 250px;
+              background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)),
+                          url('<%= event.image %>') center/cover no-repeat;
+              border-top-left-radius: 0.5rem;
+              border-top-right-radius: 0.5rem;
+            ">
+            <h5 class="card-title mb-0"><%= event.title %></h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text mb-1"><strong>Date:</strong> <%= event.date %></p>
+            <p class="card-text mb-1"><strong>Location:</strong> <%= event.location %></p>
+            <p class="card-text small text-muted mt-2"><%= event.description %></p>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<script>
+  document.getElementById('monthFilter').addEventListener('change', function () {
+    const selectedMonth = this.value;
+    const cards = document.querySelectorAll('.event-card');
+
+    cards.forEach(card => {
+      const eventMonth = card.getAttribute('data-month');
+
+      if (selectedMonth === 'all' || selectedMonth === eventMonth) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+</script>
+
 <%- include('../partials/footer') %>

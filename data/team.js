@@ -11,4 +11,7 @@ const story = [
 
 
 
-module.exports = teamMembers;
+module.exports = {
+    teamMembers,
+    story
+};
