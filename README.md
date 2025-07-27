@@ -1,5 +1,7 @@
 ## Project Overview
 
+[Live Site:](https://wpr381-community-portal.onrender.com)
+
 This project is a community portal website built using Node.js for the backend environment, Express.js as the server framework, and EJS as the templating engine. It consists of five structured web pages: Home, About, Events, Contact, and a Thank You confirmation page. The portal aims to provide a central hub for community members to stay informed, connected, and involved through dynamic content rendering, a functional contact form, and clear navigation.
 
 ## Technologies Used
@@ -67,10 +69,6 @@ Below are screenshots demonstrating the key pages and functionalities of the Com
 
 * **Thank You Page:**
     ![Thank You Page](public/images/ThankYou.png)
-
-## Online Hosting Link
-
-    https://wpr381-community-portal.onrender.com
 
 ## 👋 Final Words
 
